@@ -1,0 +1,15 @@
+Host github
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
+
+Host vsts
+  HostName vs-ssh.visualstudio.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
+
+Host dac
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_dac
+
