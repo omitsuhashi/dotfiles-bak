@@ -3,3 +3,6 @@ if [ -f ~/.bashrc ] ; then
 fi
 
 export PATH="$HOME/.cargo/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(nodenv init -)"
+

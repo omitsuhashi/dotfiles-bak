@@ -8,8 +8,3 @@ Host vsts
   User git
   IdentityFile ~/.ssh/id_rsa
 
-Host dac
-  HostName github.com
-  User git
-  IdentityFile ~/.ssh/id_dac
-
