@@ -10,4 +10,4 @@
 	name = Osamu Mitsuhashi
 	email = osamu.mitsuhashi224@gmail.com
 [commit]
-	template = /Users/omitsuhashi/.stCommitMsg
+	template = ~/.gitmessage
