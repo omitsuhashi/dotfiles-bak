@@ -2,7 +2,9 @@ alias lanscan='sudo arp-scan -I en0 -l'
 alias cdw='cd $HOME/repos/mkbr'
 alias ..='cd ..'
 alias ng-server='ngrok http --host-header=rewrite'
+alias active-venv='source venv/bin/activate'
 
+export PATH="/usr/local/opt/binutils/bin:$PATH"
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)

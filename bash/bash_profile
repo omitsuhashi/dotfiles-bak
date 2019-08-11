@@ -6,3 +6,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(nodenv init -)"
 
+export PATH="/usr/local/sbin:$PATH"
