@@ -5,7 +5,7 @@ alias ng-server='ngrok http --host-header=rewrite'
 alias cleanup-env="find . -name 'node_modules' -o -name 'venv' -name '.venv' -name 'Pods' -type d -prune -exec rm -rf '{}' +"
 alias docker-rm='docker rm `docker ps -a -q`'
 alias docker-rm-volume=' docker volume rm `docker volume ls -qf dangling=true`'
-alias awsp='aws s3 ls --profile project'
+alias awsp='aws --profile project'
 
 export PATH="/usr/local/opt/binutils/bin:$PATH"
 export PIPENV_VENV_IN_PROJECT=true
