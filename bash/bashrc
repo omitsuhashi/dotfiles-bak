@@ -2,10 +2,11 @@ alias lanscan='sudo arp-scan -I en0 -l'
 alias cdw='cd $HOME/repos'
 alias ..='cd ..'
 alias ng-server='ngrok http --host-header=rewrite'
-alias cleanup-env="find . -name 'node_modules' -o -name 'venv' -name '.venv' -name 'Pods' -type d -prune -exec rm -rf '{}' +"
 alias docker-rm='docker rm `docker ps -a -q`'
 alias docker-rm-volume=' docker volume rm `docker volume ls -qf dangling=true`'
 alias awsp='aws --profile project'
+alias cleanup-env='find ./repos -type d | grep -E "node_modules|\.+venv|Pods" | xargs rm -rf'
+# alias cleanup-env="find . -name 'node_modules' -name 'venv' -name '.venv' -name 'Pods' -type d -prune -exec rm -rf '{}' +"
 
 export PATH="/usr/local/opt/binutils/bin:$PATH"
 export PIPENV_VENV_IN_PROJECT=true
