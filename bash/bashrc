@@ -1,15 +1,34 @@
-alias lanscan='sudo arp-scan -I en0 -l'
+alias scanlan='sudo arp-scan -I en0 -l'
 alias cdw='cd $HOME/repos'
 alias ..='cd ..'
 alias ng-server='ngrok http --host-header=rewrite'
 alias docker-rm='docker rm `docker ps -a -q`'
-alias docker-rm-volume=' docker volume rm `docker volume ls -qf dangling=true`'
+alias docker-rmi='docker images | grep -w -e test -e none | awk "{print $3}" | xargs docker rmi'
+alias docker-rmv=' docker volume rm `docker volume ls -qf dangling=true`'
 alias awsp='aws --profile project'
-alias cleanup-env='find . -type d | grep -E "(node_modules|\.+venv|Pods|build|dist)$" | xargs rm -rf'
-# alias cleanup-env="find . -name 'node_modules' -name 'venv' -name '.venv' -name 'Pods' -type d -prune -exec rm -rf '{}' +"
+alias cleanup='find . -type d | grep -E "(node_modules|\.+venv|Pods|build|dist|.aws(-sam)?)$" | xargs rm -rf'
+alias cdg='cd $HOME/go/src/github.com/omitsuhashi/'
+
+# golang
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 export PATH="/usr/local/opt/binutils/bin:$PATH"
+export PATH="$PATH:/usr/local/opt/flutter/bin"
+
+# python
 export PIPENV_VENV_IN_PROJECT=true
+export SYSTEM_VERSION_COMPAT=1
+
+eval "$(jenv init -)"
+export PATH="$HOME/.jenv/bin:$PATH"
+
+# completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
+eval "$(pipenv --completion)"
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
